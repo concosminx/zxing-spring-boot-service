@@ -66,7 +66,7 @@ public class VCardController {
 
   @PostMapping(produces = MediaType.IMAGE_PNG_VALUE)
   public ResponseEntity<byte[]> createQr(@RequestBody ContactInfo ci) throws IOException, WriterException {
-    log.info("Created entity: {}", ci);
+    //log.info("Created entity: {}", ci);
 
     return ResponseEntity.ok(ZXingUtil.getQRCodeImage(ci.encode(), 300, 300));
   }
