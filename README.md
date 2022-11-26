@@ -1,5 +1,7 @@
 # SpringBoot app for QR|Barcode generation with ZXing library
 
+[![QR-Service Build](https://github.com/concosminx/zxing-spring-boot-service/actions/workflows/gradle.yml/badge.svg)](https://github.com/concosminx/zxing-spring-boot-service/actions/workflows/gradle.yml)
+
 ### Guides
 Features:
 
