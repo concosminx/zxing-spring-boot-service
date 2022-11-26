@@ -29,3 +29,6 @@ Features:
 ### Based on
 * [QRCodeBuilder](https://github.com/skrymer/qrbuilder) project
 * Generating Barcodes and QR Codes in Java tutorial from [baeldung](https://www.baeldung.com/java-generating-barcodes-qr-codes)
+
+
+Hint: make gradlew executable: `git update-index --chmod=+x gradlew`
