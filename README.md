@@ -17,7 +17,8 @@ Features:
   * height - image height, optional, default is 256 (request param)
   * color - qr color, default is black (request param)
   * file - optional, image file with logo (multipart file request param)
-    ![# QR Example](screens/screen1.png)
+
+![# QR Example](screens/screen1.png)
 
 4. Generate vcard / qr (*.txt)
 * GET, generate a demo json representing a contact: http://localhost:8080/vcard/demo/contact
