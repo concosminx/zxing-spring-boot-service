@@ -27,6 +27,7 @@ Features:
 * GET, generate a demo VCARD format for same demo contact: http://localhost:8080/vcard/demo/card
 5. Generate ics format (just a simple demo)
 * GET, generate an ics demo sample - http://localhost:8080/ical
+  
 
 ### Based on
 * [QRCodeBuilder](https://github.com/skrymer/qrbuilder) project
