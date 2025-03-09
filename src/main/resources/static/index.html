@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zxing Client</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <script src="js/script.js"></script>
+  </head>
+  <body>
+    <form x-data="signupForm" @submit.prevent="submitForm">
+      <h3>Generate barcode (*.png)</h3>
+
+      <!-- barcode type -->
+      <div class="form-field">
+        <label
+          >Barcode type:
+          <select x-model="barcodeType">
+            <option value="">Select a barcode type</option>
+            <template x-for="(choice, index) in barcodeTypes" :key="choice">
+              <option :value="choice" x-text="choice"></option>
+            </template>
+          </select>
+        </label>
+
+        <template x-if="errors.barcodeType">
+          <p class="error" x-text="errors.barcodeType"></p>
+        </template>
+      </div>
+
+      <!-- barcode -->
+      <div class="form-field">
+        <label>
+          <span></span>Barcode:
+          <input x-model="barcode" type="text" />
+        </label>
+
+        <template x-if="errors.barcode">
+          <p class="error" x-text="errors.barcode"></p>
+        </template>
+      </div>
+
+      <!-- submit button -->
+      <button type="submit">Submit</button>
+
+      <div
+        x-show="generatorError"
+        class="overlay"
+        x-cloak
+        x-transition.opacity.duration.500ms
+      >
+        <div
+          class="modal"
+          x-show="generatorError"
+          x-transition:enter-start="off-screen"
+          x-transition:enter-end="on-screen"
+        >
+          <h3 x-text="generatorErrorMessage"></h3>
+          <button type="button" @click="generatorError = false">Close</button>
+        </div>
+      </div>
+    </form>
+
+    
+  </body>
+</html>
