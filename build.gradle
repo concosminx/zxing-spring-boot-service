@@ -2,6 +2,7 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '2.7.5'
 	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+	id 'com.github.ben-manes.versions' version '0.52.0'
 }
 
 group = 'com.nimsoc'
@@ -27,4 +28,8 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+
+tasks.named("dependencyUpdates").configure {
+    outputFormatter = "html"
 }
